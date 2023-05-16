@@ -5,8 +5,8 @@ class AllVariable {
 	public static void main(String[] args) {
 		boolean c = true; //local variable
 
-		AllVariable obj = new AllVariable(); //object
-		
+		AllVariable obj = new AllVariable(); //creating an object
+		 
 		System.out.println(obj.a);
 		System.out.println(b);
 		System.out.println(c);
