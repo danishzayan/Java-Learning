@@ -1,4 +1,4 @@
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
@@ -48,13 +48,14 @@ public class RestaurantMenu {
         double totalBill = totalPrice + gstAmount;
 
         // Get current date
-        LocalDate currentDate = LocalDate.now();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd MMMM yyyy");
-        String formattedDate = currentDate.format(formatter);
+        LocalDateTime currentDateTime = LocalDateTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
+        String formattedDateTime = currentDateTime.format(formatter);
+
 
         // Generate bill
-        System.out.println("\n-------------- Zayan Restaurant -------------");
-        System.out.println("Date: " + formattedDate);
+        System.out.println("\n-------------- Zayan Restaurant --------------");
+        System.out.println("Date: " + formattedDateTime);
         System.out.println("----------------------------------------------");
         System.out.println("Item            Price     Quantity      Total");
         System.out.println("----------------------------------------------");
@@ -69,7 +70,7 @@ public class RestaurantMenu {
         System.out.printf("Total: %.2f%n", totalPrice);
         System.out.printf("GST (%.2f%%): %.2f%n", (GST_RATE * 100), gstAmount);
         System.out.printf("Total Bill: %.2f%n", totalBill);
-        System.out.println("--------------Thanks for visting--------------");
+        System.out.println("--------------Thanks for Visting--------------");
 
         scanner.close();
     }
