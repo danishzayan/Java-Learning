@@ -3,11 +3,12 @@ import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 public class RestaurantMenu {
-    private static final double GST_RATE = 0.18; // 18% GST rate
+    private static final double GST_RATE = 0.18;
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+        System.out.println("-------------------------------");
         System.out.println("Welcome to the Restaurant Menu!");
         System.out.println("-------------------------------");
 
@@ -47,15 +48,14 @@ public class RestaurantMenu {
         // Calculate total bill including GST
         double totalBill = totalPrice + gstAmount;
 
-        // Get current date
+        // Get current date and time for bill
         LocalDateTime currentDateTime = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
         String formattedDateTime = currentDateTime.format(formatter);
 
-
-        // Generate bill
+        // Generate bill for zayan restaurant
         System.out.println("\n-------------- Zayan Restaurant --------------");
-        System.out.println("Date: " + formattedDateTime);
+        System.out.println("Date and Time: " + formattedDateTime);
         System.out.println("----------------------------------------------");
         System.out.println("Item            Price     Quantity      Total");
         System.out.println("----------------------------------------------");
